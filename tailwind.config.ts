@@ -57,6 +57,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +84,54 @@ export default {
             height: "0",
           },
         },
+        "pulse-glow": {
+          "0%, 100%": {
+            boxShadow: "0 0 20px hsl(355 85% 55% / 0.3)",
+          },
+          "50%": {
+            boxShadow: "0 0 40px hsl(355 85% 55% / 0.6)",
+          },
+        },
+        "fireworks": {
+          "0%": {
+            transform: "scale(0) rotate(0deg)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(4) rotate(180deg)",
+            opacity: "0",
+          },
+        },
+        "countdown": {
+          "0%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+          "50%": {
+            transform: "scale(1.2)",
+            opacity: "0.8",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+        "fireworks": "fireworks 1s ease-out infinite",
+        "countdown": "countdown 1s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-dark": "var(--gradient-dark)",
+      },
+      boxShadow: {
+        "glow": "var(--shadow-glow)",
+        "gold-glow": "var(--shadow-gold-glow)",
       },
     },
   },
